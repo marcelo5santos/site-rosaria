@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Rosária</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            max-width:900px;
+            margin:auto;
+            padding:20px;
+            background:#f5f7fa;
+        }
+
+        h1{
+            color:#0057b8;
+        }
+
+        form{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            margin-bottom:30px;
+        }
+
+        input,
+        textarea{
+            width:100%;
+            padding:10px;
+            margin-bottom:10px;
+        }
+
+        button{
+            background:#0057b8;
+            color:white;
+            border:none;
+            padding:12px 20px;
+            border-radius:6px;
+            cursor:pointer;
+        }
+
+        .card{
+            background:white;
+            padding:15px;
+            margin-bottom:15px;
+            border-radius:10px;
+        }
+
+        img{
+            max-width:250px;
+            border-radius:8px;
+        }
+
+        .remover{
+            background:#c62828;
+            text-decoration:none;
+            color:white;
+            padding:8px 15px;
+            border-radius:5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Painel Rosária</h1>
+
+<form method="POST" enctype="multipart/form-data">
+
+    <input
+        type="text"
+        name="operadora"
+        placeholder="Operadora"
+        required
+    >
+
+    <input
+        type="text"
+        name="titulo"
+        placeholder="Título da campanha"
+        required
+    >
+
+    <textarea
+        name="descricao"
+        placeholder="Descrição"
+        required
+    ></textarea>
+
+    <input
+        type="text"
+        name="faixa_etaria"
+        placeholder="Faixa etária"
+        required
+    >
+
+    <input
+        type="text"
+        name="valor"
+        placeholder="Valor"
+        required
+    >
+
+    <input
+        type="file"
+        name="imagem"
+    >
+
+    <button type="submit">
+        Cadastrar Plano
+    </button>
+
+</form>
+
+<hr>
+
+<h2>Planos cadastrados</h2>
+
+{% for plano in planos %}
+
+<div class="card">
+
+    <h3>{{ plano.titulo }}</h3>
+
+    <strong>{{ plano.operadora }}</strong>
+
+    <p>{{ plano.descricao }}</p>
+
+    <p>
+        <b>Faixa:</b>
+        {{ plano.faixa_etaria }}
+    </p>
+
+    <p>
+        <b>Valor:</b>
+        {{ plano.valor }}
+    </p>
+
+    {% if plano.imagem %}
+        <img
+            src="{{ url_for('static', filename='uploads/' + plano.imagem) }}"
+            alt="{{ plano.titulo }}"
+        >
+    {% endif %}
+
+    <br><br>
+
+    <a
+        class="remover"
+        href="/adm/desativar/{{ plano.id }}"
+    >
+        Remover
+    </a>
+
+</div>
+
+{% endfor %}
+
+</body>
+</html>

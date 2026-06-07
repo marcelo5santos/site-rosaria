@@ -1,0 +1,327 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 76px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    position: relative;
+}
+
+.container {
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-icon img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.logo span:last-child {
+    display: none;
+}
+
+.menu{
+    display:flex;
+    align-items:center;
+    gap:34px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #0b1f45;
+    font-size: 15px;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+
+.menu a:hover,
+.menu a:first-child {
+    color: #0b63ce;
+    border-bottom: 3px solid #0b63ce;
+}
+
+.btn-header {
+    background: #19c463;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero-bg {
+    width: 100%;
+    display: block;
+}
+
+.hero-content {
+    position: absolute;
+    top: 7%;
+    right: 32%;
+    max-width: 520px;   
+}
+
+.hero-content h1 {
+    font-size: 64px;
+     color:#002c7d;
+}
+
+.hero-content h2 {
+    font-size: 38px;
+}
+.hero-content h2 span {
+    color: #0057d9;
+}
+
+.hero-line {
+    width: 170px;
+    height: 4px;
+    background: #c99a22;
+    margin: 18px 0 28px;
+}
+
+.hero-content p {
+    font-size: 21px;
+    line-height: 1.45;
+    color: #06245c;
+    margin-bottom: 30px;
+}
+
+
+.hero-btn {
+    display: inline-block;
+    background: #08b957;
+    color: #fff;
+    padding: 17px 38px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top:10px;
+}
+.hero-benefits{
+    margin-bottom:20px;
+    width: 92%;
+}
+
+.benefit{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:18px 0;
+    width:85%;
+}
+
+.benefit:last-child{
+    border-bottom:none;
+}
+
+.benefit-icon{
+    width:60px;
+    height:60px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#fff;
+    border-radius:50%;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+
+    font-size:26px;
+}
+
+.benefit-text{
+    max-width:330px;
+    line-height:1.4;
+}
+
+.benefit-text strong{
+    color:#0b63ce;
+}
+/* RESPONSIVO */
+
+@media (max-width: 1100px) {
+    .hero-content {
+        top: 12%;
+        left: 26%;
+        max-width: 440px;
+        transform: none;
+    }
+
+    .hero-content h1 {
+        font-size: 52px;
+    }
+
+    .hero-content h2 {
+        font-size: 34px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        max-width: 420px;
+    }
+
+    .hero-benefits {
+        width: 420px;
+    }
+
+    .benefit-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 900px) {
+    .header {
+        height: auto;
+        padding: 16px 0;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .btn-header {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .hero {
+        background: #ffffff;
+    }
+
+    .hero-bg {
+        width: 100%;
+        min-height: 680px;
+        object-fit: cover;
+        object-position: left center;
+    }
+
+    .hero-content {
+        top: 16%;
+        left: 42%;
+        max-width: 420px;
+    }
+
+    .hero-content h1 {
+        font-size: 46px;
+    }
+
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-benefits {
+        width: 100%;
+    }
+
+    .hero-btn {
+        font-size: 15px;
+        padding: 14px 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu {
+        display: none;
+    }
+
+    .logo-icon img {
+        width: 140px;
+    }
+
+    .hero {
+        min-height: auto;
+        background: #ffffff;
+    }
+
+    .hero-bg {
+        opacity: 0.35;
+        min-height: 760px;
+        object-fit: cover;
+        object-position: left center;
+    }
+
+    .hero-content {
+        top: 120px;
+        left: 24px;
+        right: 24px;
+        transform: none;
+        max-width: none;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        max-width: 340px;
+    }
+
+    .benefit {
+        gap: 12px;
+        padding: 12px 0;
+    }
+
+    .benefit-icon {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+    }
+
+    .benefit-text {
+        font-size: 14px;
+    }
+
+    .hero-btn {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 15px;
+    }
+}

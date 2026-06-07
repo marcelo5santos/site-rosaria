@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosária Planos de Saúde | Planaltina de Goiás e DF</title>
+    <meta name="description"
+        content="Rosária, especialista em planos de saúde em Planaltina de Goiás, DF e região. Cotação para planos individuais, familiares, empresariais e MEI.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="#inicio" class="logo" aria-label="Rosária Planos de Saúde">
+                <span class="logo-icon"><img src="{{ url_for('static', filename='images/logo_header_rosaria.png') }}"
+                        alt="Rosária"></span>
+                <span>
+                    <strong>Rosária</strong>
+                    <small>PLANOS DE SAÚDE</small>
+                </span>
+            </a>
+
+            <nav class="menu" aria-label="Menu principal">
+                <a href="#inicio">Início</a>
+                <a href="#planos">Planos</a>
+                <a href="#operadoras">Operadoras</a>
+                <a href="#videos">Vídeos</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <a class="btn-header" href="https://wa.me/5561983841036" target="_blank">
+                Cotação no WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <img class="hero-bg" src="{{ url_for('static', filename='images/hero.png') }}"
+                alt="Rosária especialista em planos de saúde">
+
+            <div class="hero-content">
+                <h1>Rosária</h1>
+                <h2>Especialista em<br><span>Planos de Saúde</span></h2>
+
+                <div class="hero-line"></div>
+
+                <p>
+                    Encontre o plano ideal para você, sua família ou sua empresa
+                    com atendimento personalizado e as melhores condições.
+                </p>
+                <div class="hero-benefits">
+
+                    <div class="benefit">
+                        <div class="benefit-icon">📍</div>
+                        <div class="benefit-text">
+                            Atendimento em <strong>Planaltina de Goiás, DF e região</strong>
+                        </div>
+                    </div>
+
+                    <div class="benefit">
+                        <div class="benefit-icon">👨‍👩‍👧‍👦</div>
+                        <div class="benefit-text">
+                            Planos Individuais, Familiares,
+                            <strong>Empresariais e MEI</strong>
+                        </div>
+                    </div>
+
+                    <div class="benefit">
+                        <div class="benefit-icon">🏥</div>
+                        <div class="benefit-text">
+                            As melhores operadoras e
+                            <strong>condições para você</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a class="hero-btn" href="https://wa.me/5561983841036" target="_blank">
+                    Solicitar cotação pelo WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
